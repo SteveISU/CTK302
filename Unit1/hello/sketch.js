@@ -7,5 +7,5 @@ function draw() {
   background('red') ;
   fill('purple') ;
   textSize(32) ;
-  text("hello world!", 250, 250) ;
+  text("Hello World!", 250, 250) ;
 }
