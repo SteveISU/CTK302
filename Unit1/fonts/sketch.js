@@ -11,7 +11,7 @@ function draw() {
   background("black");
   fill ("white");
   textFont (f2, 52);
-text("Pardon \nMy French", width/2, 200);
+text("Pardon \nMy French Yo", width/2, 200);
 textFont(f1, 40);
 text("Dang varmint's", width/2, 300);
 }
