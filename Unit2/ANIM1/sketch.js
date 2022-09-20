@@ -7,9 +7,9 @@ function setup() {
 
 function draw() {
   background("red");
-  textSize(40);
-  textFont(f1, 200);
-  text("EPIC movement!",x,200);
+  textSize(20);
+  textFont(f1, 120);
+  text("EPIC movement!",x,300);
   x += 5;
 
 if(x > width){
