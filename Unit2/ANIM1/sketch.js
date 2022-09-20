@@ -7,7 +7,7 @@ function setup() {
 
 function draw() {
   background("red");
-  textSize(60);
+  textSize(40);
   textFont(f1, 200);
   text("EPIC movement!",x,200);
   x += 5;
