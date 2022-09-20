@@ -9,7 +9,7 @@ function draw() {
   background("red");
   textSize(60);
   textFont(f1, 200);
-  text("EPIC word movement!",x,200);
+  text("EPIC movement!",x,200);
   x += 5;
 
 if(x > width){
