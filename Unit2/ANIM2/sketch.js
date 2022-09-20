@@ -16,7 +16,7 @@ function draw() {
   scale (.1 * x);
   translate(x,0);
  avatar( );
- x += .050;
+ x += .079;
  if (x > width){
   x = 0;
 
