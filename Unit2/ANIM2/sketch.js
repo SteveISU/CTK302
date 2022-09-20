@@ -13,9 +13,10 @@ function draw() {
   
   background("red");
   push();
+  scale (.1 * x);
   translate(x,0);
  avatar( );
- x += 5;
+ x += .050;
  if (x > width){
   x = 0;
 
@@ -72,5 +73,5 @@ line(226,303,226,324 );
   stroke("#F653EC");
   line(261,245,427,134 );
   
-    
+  
 }
