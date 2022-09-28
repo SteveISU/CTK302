@@ -9,15 +9,16 @@ function draw() {
   
   switch (state) {
     case 0:
-    background('white');
-    text("Guess \nWhat!", width/2, height/2);
+    background('#4BD8D8');
+    //text("Guess \nWhat!", width/2, height/2);
     break;
      case 1:
-    background('grey');
-    text("case 1", 250, 250);
+    background('#E45001');
+    //text("case 1", 250, 250);
     break;
 
   }
+  fill('red');
   rect(100,100,100,100);
 }
 
