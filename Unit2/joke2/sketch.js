@@ -14,7 +14,7 @@ function draw() {
     break;
      
     case 1:
-    background('grey');
+    background('green');
     text("Plagiarism!", width/2, height/2);
     timmer++;
    if(timer > 2* 60 ){
