@@ -3,7 +3,7 @@ let numberOfTouches ;
 function setup() {
   createCanvas(400, 400);
   i1 = loadImage ("assets/animal.jpg");
-  i2 = loadImage ("assets/whitefox.jpg");
+  i2 = loadImage ("assets/whitefox.jpeg");
   i3 = loadImage ("assets/groundhog.jpeg");
   i4 = loadImage ("assets/foxagain.jpeg");
 
@@ -21,9 +21,8 @@ function draw() {
       break ;
       
       case 1: 
-      image(i1, width/2, height/2 - 10, 595, 567);
+      image(i2, width/2, height/2 - 10, 595, 567);
        text("it's kind of lonely here", 5, 22) ; 
-      // put a picture here
       break ;
       
       case 2:image
