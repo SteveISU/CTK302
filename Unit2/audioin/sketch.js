@@ -1,8 +1,13 @@
 let mic;
 let vol = 0;
+let i1
 
 function setup() {
   createCanvas(400, 400);
+  i1 = loadImage ("assets/baseballfield.jpg");
+ 
+  imageMode(CENTER);
+
 
   // code for initializing mic in.
   mic = new p5.AudioIn(); // what does "new" mean?
@@ -11,6 +16,7 @@ function setup() {
 
 function draw() {
   background("green");
+  image(i1, width/2, height/2 - 10, 595, 567);
 
   // get the sound input
   vol = mic.getLevel(); // returned level is between 0 and 1
@@ -27,7 +33,7 @@ function draw() {
   // this moves the box
   //  x = vol*200 ;
   x = map(vol, 0, 1, 0, width);
-  rect(x, 200, 50, 50);
+  circle(x, 200, 50, 50);
 }
 
 // you need this code for audio programs and also, the user
