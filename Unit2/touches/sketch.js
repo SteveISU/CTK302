@@ -2,7 +2,7 @@ let numberOfTouches ;
 
 function setup() {
   createCanvas(400, 400);
-  i1 = loadImage ("assets/fox.jpeg");
+  i1 = loadImage ("assets/animal.jpg");
   i2 = loadImage ("assets/whitefox.jpg");
   i3 = loadImage ("assets/groundhog.jpeg");
   i4 = loadImage ("assets/foxagain.jpeg");
