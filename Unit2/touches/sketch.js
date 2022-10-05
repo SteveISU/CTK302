@@ -27,7 +27,7 @@ function draw() {
       
       case 2:image
       image(i3, width/2, height/2 - 10, 595, 567);
-      text("Guten Tag.", 5, 22) ; 
+      text("Guten Tag.", width/2, height/2) ; 
             // put a picture here
       break ;
       
