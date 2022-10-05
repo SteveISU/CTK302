@@ -17,7 +17,7 @@ function draw() {
   
   switch(numberOfTouches) {
     case 0: 
-      text("Here are some animals", width/2, height/2) ; 
+      text("Here are some animals", width/2, height/2, 5,22) ; 
       break ;
       
       case 1: 
