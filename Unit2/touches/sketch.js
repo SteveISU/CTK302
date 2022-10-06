@@ -23,7 +23,7 @@ function draw() {
       
       case 1: 
       image(i2, width/2, height/2 - 10, 595, 567);
-       text("Hello", 5, 22) ; 
+       text("Hello",width/2, height/2) ; 
       break ;
       
       case 2:image
