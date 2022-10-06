@@ -7,6 +7,7 @@ function setup() {
   i3 = loadImage ("assets/groundhog.jpeg");
   i4 = loadImage ("assets/foxagain.jpeg");
 
+ textAlign(CENTER)
   imageMode(CENTER);
 }
 
@@ -28,12 +29,13 @@ function draw() {
       case 2:image
       image(i3, width/2, height/2 - 10, 595, 567);
       text("Guten Tag.", width/2, height/2) ; 
+      fill("white")
             // put a picture here
       break ;
       
       case 3:
         image(i4, width/2, height/2 - 10, 595, 567);
-     text("Hola!", 5, 22) ; 
+     text("Hola!",  width/2, height/2) ; 
             // put a picture here
       break ;
     
