@@ -32,9 +32,4 @@ text("Hello there!", 100, 100);
 }
 
 
- function mouseReleased(){
-    state++;
-   if(state>2){
-     state=0;
-   }
-  }
+ 
