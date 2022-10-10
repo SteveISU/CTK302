@@ -78,7 +78,7 @@ function draw() {
       }
       image(bk, 312, 270);
       textSize(40);
-      text("Yell!\nTo help Zert leave.", 150, 200);
+      text("Yell!\nTo help\n Zert leave.", 389, 200);
       break;
 
     case 3:
