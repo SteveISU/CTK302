@@ -98,7 +98,7 @@ function draw() {
 
     case 4:
       textSize(79);
-      text("GoodBye", 244, 171);
+      text("Yay!", 244, 171);
       y = 337
 
       background("#ffcb08");
