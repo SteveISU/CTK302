@@ -37,7 +37,7 @@ function draw() {
 
     case 0:
       background("#ffcb08");
-      image(city, 0, 0);
+      image(city, 0,0,width,height);
       fill("white");
       textSize(20);
 
@@ -55,53 +55,46 @@ function draw() {
 
       break;
 
-    case 1:
+    case 1: //wait for mic imput
       background(100);
-      image(city, 0, 0);
-      myTimer++;
-      if (myTimer >= 10) {
-        myTimer = 4;
-        myState = 2;
-
-      }
-
-      break;
-
-    case 2:
-      background(100);
-      image(city, 0, 0);
+      image(city, 0, 0,width,height);
+      
+     
       vol = mic.getLevel();
       if (vol >= 0.2) {
 
-        myState = 3;
+        myState = 2;
         //gam.play();
       }
-      image(bk, 312, 270);
+      image(bk, 312, 270,200,200);
       textSize(40);
       text("Yell!\nTo help\n Zert leave.", 389, 200);
       break;
 
-    case 3:
-      background(200);
-      image(bk, 312, y);
-      y = y - 10;
-      if (y <= 0) {
-        myState = 4;
-        gam.stop();
+      case 2://biker flys up
+        background(100);
+        image(city, 0, 0,width,height);
+        image(bk, 312, y,200,200);
+      y = y - 3;
+      if (y <= -200) {
+        myState = 3;
+
 
       }
 
-
-
       break;
 
+    
 
-    case 4:
-      textSize(79);
-      text("Yay!", 244, 171);
+
+    case 3:
+      background("#ffcb08");
+      image(city, 0, 0,width,height);
+    textSize(79);
+      text("Yay!",389, 200);
       y = 337
 
-      background("#ffcb08");
+      
       break;
   }
 }
