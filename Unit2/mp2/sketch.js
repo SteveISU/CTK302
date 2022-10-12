@@ -91,7 +91,7 @@ function draw() {
       background("#ffcb08");
       image(city, 0, 0,width,height);
     textSize(79);
-      text("Yay!",389, 200);
+      text("You did\n it!",389, 200);
       y = 337
 
       
