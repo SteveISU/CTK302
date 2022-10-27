@@ -8,6 +8,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   rectMode(CENTER);
   imageMode(CENTER);
+  f1=loadFont('assets/flagship.ttf');
   i1 = loadImage ("assets/fireguy.png");
   i2 = loadImage ("assets/firewalk.png");
   i3 = loadImage ("assets/gamebg.png");
@@ -17,7 +18,7 @@ function setup() {
 
   // Spawn objects
 
-  for (let i = 0; i < 40; i++) {
+  for (let i = 0; i < 1; i++) {
     cars.push(new Car());
   }
 
@@ -29,25 +30,40 @@ function draw() {
 
   switch(state){
       case 0://menu
-      text("click to start", width/2, height/2);
+      image(i3, 659,500,width,height);
+      textFont (f1, 52);
+     fill("red");
+     textSize(155);
+      text("Fire Fight\n click to start", 289, 289);
+     
       break; 
       
       case 1:
+        image(i3, 659,500,width,height);
       game();
       timer++;
-      if(timer> 3*60){
+      if(timer> 11*60){
         timer =0;
         state =3;
       }
       break;
       
        case 2://menu
-      text("you won!", width/2, height/2);
-      background("grey");
+       background("white");
+       fill("red");
+       textFont (f1, 52);
+       textSize(155);
+       image(i5, 0,0,width,height);
+      text("You Win!", 289, 289);
       break; 
       
        case 3://menu
-      text("you lost", width/2, height/2);
+       background("white");
+       image(i4, 0,0,width,height);
+       textFont (f1, 52);
+       textSize(155);
+       fill("pink");
+      text("You're a \n Looser!", 289, 289);
       break; 
       
       
@@ -100,9 +116,11 @@ function game() {
     
   }
 
+  if(cars.length<=0){
+    state= 2;
+  }
   // add a "frog"
-  fill("green");
-  ellipse(frogPos.x, frogPos.y, 50, 50);
+  image(i1, frogPos.x, frogPos.y, 600,600);
   checkForKeys();
 }
 
@@ -132,7 +150,7 @@ class Car {
   display() {
     // this can be text, images, or shapes
     fill(this.r, this.g, this.b, this.o);
-    rect(this.pos.x, this.pos.y, this.size, 25);
+    image(i2,this.pos.x, this.pos.y, this.size, 27);
   }
 
   move() {
