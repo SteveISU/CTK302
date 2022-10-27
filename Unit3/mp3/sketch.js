@@ -2,11 +2,17 @@ let cars = [];
 let frogPos;
 let state= 0;
 let timer=0;
+let i1, i2, i3, i4, i5;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   rectMode(CENTER);
   imageMode(CENTER);
+  i1 = loadImage ("assets/fireguy.png");
+  i2 = loadImage ("assets/firewalk.png");
+  i3 = loadImage ("assets/gamebg.png");
+  i4 = loadImage ("assets/losescreen.png");
+  i5 = loadImage ("assets/winscreen.png");
   
 
   // Spawn objects
