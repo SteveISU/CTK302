@@ -7,6 +7,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   rectMode(CENTER);
   imageMode(CENTER);
+  
 
   // Spawn objects
 
