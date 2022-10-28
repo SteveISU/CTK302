@@ -43,7 +43,7 @@ function draw() {
       game();
 
       timer++;
-      if(timer> 40*60){
+      if(timer> 14*60){
         timer =0;
         state =3;
       }
@@ -55,7 +55,9 @@ function draw() {
        textFont (f1, 52);
        textSize(155);
        image(i5, width/2, height/2,width,height);
-      text("You Win!", 289, 289);
+      text("You Win!", 309, 389);
+      textSize(105);
+      text("Click to Restart", 289, 589);
       break; 
       
        case 3://menu
@@ -64,7 +66,9 @@ function draw() {
        textFont (f1, 52);
        textSize(155);
        fill("pink");
-      text("You're a \n Loser!", 289, 289);
+      text("You're a \n Loser!", 389, 280);
+      textSize(105);
+      text("Click to Restart", 289, 589);
       break; 
       
       
