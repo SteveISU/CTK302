@@ -34,7 +34,7 @@ function draw() {
       textFont (f1, 52);
      fill("red");
      textSize(155);
-      text("Fire Fight !\n click to start", 289, 289);
+      text("Fire Fight!\n click to start", 289, 289);
      
       break; 
       
@@ -53,13 +53,13 @@ function draw() {
        fill("red");
        textFont (f1, 52);
        textSize(155);
-       image(i5, 0,0,width,height);
+       image(i5, 659,500,width,height);
       text("You Win!", 289, 289);
       break; 
       
        case 3://menu
        background("white");
-       image(i4, 0,0,width,height);
+       image(i4, 659,500,width,height);
        textFont (f1, 52);
        textSize(155);
        fill("pink");
