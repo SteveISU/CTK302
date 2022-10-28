@@ -1,6 +1,6 @@
 let mic;
 let vol = 0;
-let i1
+let i1;
 
 function setup() {
   createCanvas(400, 400);
@@ -16,7 +16,7 @@ function setup() {
 
 function draw() {
   background("green");
-  image(i1, width/2, height/2 - 10, 595, 567);
+  image(i1, width/2, height/2 - 10, 795, 767);
 
   // get the sound input
   vol = mic.getLevel(); // returned level is between 0 and 1
