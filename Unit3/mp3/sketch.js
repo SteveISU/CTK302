@@ -18,7 +18,7 @@ function setup() {
 
   // Spawn objects
 
-  for (let i = 0; i < 1; i++) {
+  for (let i = 0; i < 4; i++) {
     cars.push(new Car());
   }
 
@@ -34,7 +34,7 @@ function draw() {
       textFont (f1, 52);
      fill("red");
      textSize(155);
-      text("Fire Fight\n click to start", 289, 289);
+      text("Fire Fight !\n click to start", 289, 289);
      
       break; 
       
