@@ -30,7 +30,7 @@ function draw() {
 
   switch(state){
       case 0://menu
-      image(i3, 659,500,width,height);
+      image(i3, width/2, height/2,width,height);
       textFont (f1, 52);
      fill("red");
      textSize(155);
@@ -39,10 +39,11 @@ function draw() {
       break; 
       
       case 1:
-        image(i3, 659,500,width,height);
+        image(i3, width/2, height/2,width,height);
       game();
+
       timer++;
-      if(timer> 11*60){
+      if(timer> 40*60){
         timer =0;
         state =3;
       }
@@ -53,17 +54,17 @@ function draw() {
        fill("red");
        textFont (f1, 52);
        textSize(155);
-       image(i5, 659,500,width,height);
+       image(i5, width/2, height/2,width,height);
       text("You Win!", 289, 289);
       break; 
       
        case 3://menu
        background("white");
-       image(i4, 659,500,width,height);
+       image(i4, width/2, height/2,width,height);
        textFont (f1, 52);
        textSize(155);
        fill("pink");
-      text("You're a \n Looser!", 289, 289);
+      text("You're a \n Loser!", 289, 289);
       break; 
       
       
@@ -102,14 +103,17 @@ function mouseReleased(){
 }
 
 function game() {
-   background("white");
+   //background("white");
 
   // operate on every car
   for (let i = 0; i < cars.length; i++) {
     cars[i].display();
     cars[i].move();
     
-    if(cars[i].pos.dist(frogPos) < 30){
+    let hosePos = createVector(frogPos.x+80, frogPos.y+80) ;
+    //ellipse(hosePos.x, hosePos.y, 30,30);
+
+    if(cars[i].pos.dist(hosePos) < 30){
       cars.splice(i,1);
       
     }
@@ -143,14 +147,14 @@ class Car {
     this.g = random(255);
     this.b = random(255);
     this.o = random(100);
-    this.size = random(48, 128);
+    this.size = random(100, 400);
   }
   // methods
 
   display() {
     // this can be text, images, or shapes
     fill(this.r, this.g, this.b, this.o);
-    image(i2,this.pos.x, this.pos.y, this.size, 27);
+    image(i2,this.pos.x, this.pos.y, this.size, this.size);
   }
 
   move() {
