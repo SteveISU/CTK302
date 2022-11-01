@@ -33,8 +33,12 @@ function draw() {
       image(i3, width/2, height/2,width,height);
       textFont (f1, 52);
      fill("red");
-     textSize(155);
-      text("Fire Fight!\n click to start", 289, 289);
+     textSize(255);
+      text("Fire Fight!",169, 289);
+      textSize(95);
+      text("Put out 6 flames before \n the city BURNS DOWN!", 139, 419);
+      textSize(105)
+      text("Click to Start ->",309, 657);
      
       break; 
       
