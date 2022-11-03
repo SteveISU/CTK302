@@ -2,7 +2,15 @@ let cars = [];
 let frogPos;
 let state= 0;
 let timer=0;
+let s1, s2, s3;
 let i1, i2, i3, i4, i5;
+
+function preload(){
+  s1= loadSound('assets/gameplay.mp3');
+  s2= loadSound('assets/winner.mp3');
+  s3= loadSound('assets/lose.mp3');
+
+}
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -49,7 +57,10 @@ function draw() {
       timer++;
       if(timer> 14*60){
         timer =0;
+        s1.stop();
+        s3.play();
         state =3;
+      
       }
       break;
       
@@ -62,6 +73,8 @@ function draw() {
       text("You Win!", 309, 389);
       textSize(105);
       text("Click to Restart", 289, 589);
+       
+      
       break; 
       
        case 3://menu
@@ -87,6 +100,8 @@ function resetTheGame(){
     cars.push(new Car());
   }
   timer=0;
+  frogPos.x=width/2;
+  frogPos.y=height-80;
 }
 
 
@@ -95,16 +110,19 @@ function mouseReleased(){
   switch(state){
       case 0:
       state=1;
+      s1.play();
       break;
       
       case 2:
       resetTheGame()
       state=0;
+      s2.stop();
       break;
       
       case 3:
       resetTheGame()
       state=0;
+      s3.stop();
       break;
   }
   
@@ -130,6 +148,8 @@ function game() {
 
   if(cars.length<=0){
     state= 2;
+    s2.play();
+    s1.stop();
   }
   // add a "frog"
   image(i1, frogPos.x, frogPos.y, 600,600);
@@ -172,4 +192,8 @@ class Car {
     if (this.pos.y > height) this.pos.y = 0;
     if (this.pos.y < 0) this.pos.y = height;
   }
+}
+  function touchStarted() {
+   getAudioContext().resume();
+
 }
