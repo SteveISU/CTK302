@@ -62,7 +62,7 @@ function draw() {
   noStroke();
   textSize(199);
   textAlign(CENTER);
-  text("BOO!!", width / 2, height / 2);
+  text("Boo!", width / 2, height / 2);
 
 }
 window.addEventListener("deviceorientation", function (e){
