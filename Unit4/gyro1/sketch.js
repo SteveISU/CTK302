@@ -65,3 +65,15 @@ function draw() {
   text("BOO!!", width / 2, height / 2);
 
 }
+window.addEventListener("deviceorientation", function (e){
+  alpha= e.alpha;
+  beta= e.beta;
+  gamma= e.gamma;
+});
+// Read in accelerometer data
+window.addEventListener('devicemotion', function(e) {
+  // get accelerometer values
+  x = e.acceleration.x;
+  y = e.acceleration.y;
+  z = e.acceleration.z;
+});
