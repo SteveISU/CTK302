@@ -7,9 +7,13 @@ let x = 0;
 let windspeed = 0;
 let temperature=0;
 let humidity=0;
+let i1, i2;
 
 function setup() {
   createCanvas(400, 400);
+  imageMode(CENTER);
+  i1 = loadImage ("assets/Cloudz.jpeg");
+  i2 = loadImage ("assets/skybg.jpeg");
 
   // HERE is the call to get the weather. We build the string first.
 
@@ -61,7 +65,7 @@ function draw() {
       // cloud
       fill("white");
       noStroke();
-      ellipse(x, 300, 200, 100);
+      image(i1);
 
       // move the cloud's x position
       x = x + windspeed / 3;
