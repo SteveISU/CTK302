@@ -63,9 +63,10 @@ function draw() {
  
 
       // cloud
+      image(i1,x,300,200,100);
       fill("white");
       noStroke();
-      image(i1);
+      
 
       // move the cloud's x position
       x = x + windspeed / 3;
